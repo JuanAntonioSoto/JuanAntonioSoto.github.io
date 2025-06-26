@@ -46,11 +46,11 @@ Esta distribución realiza muchos de los pasos automáticamente, a diferencia de
 
 Arrancamos la máquina, y nos mostrará el siguiente menú, seleccionamos la primera opción.
 
-![install menu](../assets/images/inslatar-parrot-os/install-menu.png)
+![install menu](../assets/img//inslatar-parrot-os/install-menu.png)
 
 Se nos ejecutará el SO, pero sin instalar, aunque ya podemos hacernos una idea del contenido del SO que además viene con las VMTools preinstaladas
 
-![fist SO](../assets/images/inslatar-parrot-os/first-so-vmtools.png)
+![fist SO](../assets/img//inslatar-parrot-os/first-so-vmtools.png)
 
 El comando ejecutado en la terminal muestra la versión de VMTools que tenemos "instalada", para comprobarlo usamos el siguiente comando.
 
@@ -63,7 +63,7 @@ En el escritorio debemos hacer doble clic en **Install Parrot** para que comienc
 En mi caso, toda la instalación por defecto hasta el menú de particiones.
 Elegimos la opción de borrar el disco, esta vez, sin swap.  
 
-![disk partition](../assets/images/inslatar-parrot-os/disk-partition.png)  
+![disk partition](../assets/img//inslatar-parrot-os/disk-partition.png)  
 
 He checkeado la opción de cifrar el sistema, añadiendo una contraseña. **No es la contraseña de ningún ususario, si no la del crifrado del sistema, nos la pedirá al arrancar, antes de llegar a poder logear con cualquier usuario**.
 
@@ -72,7 +72,7 @@ Si no ciframos el disco, cabe la posibilidad de que se pueda modificar la contra
 La siguiente opción de instalación será la de configurar el usuario del sistema.
 Y nada más que configurar en el proceso de instalación. Ya simplemente lo dejamos que termine de instalar.
 
-![installprogress](../assets/images/inslatar-parrot-os/installing-parrot.png)
+![installprogress](../assets/img//inslatar-parrot-os/installing-parrot.png)
 
 Y poco más que configurar en el proceso de instalación
 

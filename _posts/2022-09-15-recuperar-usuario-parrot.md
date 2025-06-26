@@ -30,11 +30,11 @@ Que el disco duro de la máquina a la cual queremos acceder no esté cifrado.
 
 Para realizar esto, tendremos que modificar el GRUB antes del arranque del sistema operativo, es tan sencillo como darle a la tecla '**e**' en nuestro teclado cuando estamos en la siguiente pantalla.
 
-![grub menu](../assets/images/recuperar-usuario-parrot-os/grub-menu.png)
+![grub menu](../assets/img/recuperar-usuario-parrot-os/grub-menu.png)
 
 Una vez hemos pulsado el atajo se nos abrirá una vista para editar los parámetros del kernel.
 
-![grub params to edit](../assets/images/recuperar-usuario-parrot-os/grub-params-to-edit.png)  
+![grub params to edit](../assets/img/recuperar-usuario-parrot-os/grub-params-to-edit.png)  
 
 Como vemos en la anterior imagen, he subrayado en rojo dos cosas sobre el parámetro lnix
 * 'ro' que hace referencia a los permisos readonly. Lo cambiaremos por 'rw' read-write.
@@ -43,7 +43,7 @@ Como vemos en la anterior imagen, he subrayado en rojo dos cosas sobre el parám
 Lo que estamos haciendo en los pasos anteriores es indicarle al kernel que monte el sistema de fichero root con permisos de lectura y escritura, con lo cual, podremos configurar correctamente ficheros desconfigurados, o cambiar la contraseña de algún usuario.
 
 En la siguiente imagen vemos como quedaría el parámetro.
-![grup edited params](../assets/images/recuperar-usuario-parrot-os/grub-parameters-changed.png)
+![grup edited params](../assets/img/recuperar-usuario-parrot-os/grub-parameters-changed.png)
 
 Pulsamos F10, arrancamos y como vemos en la última imagen, nos ha abierto una terminal ejecutada bajo el usuario root.
 

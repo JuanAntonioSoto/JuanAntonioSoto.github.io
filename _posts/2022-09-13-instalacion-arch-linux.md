@@ -54,20 +54,20 @@ Usando VMWare crearé una nueva máquina virtual con la configuración típica.
 
 [Descargamos la ISO](https://archlinux.org/download/) y seleccionamos la opción instalar disc image file, añadiendo la ruta de descarga.  
 
-![installer](/assets/images/instalar-archlinux/installer-disc-option.png)  
+![installer](/assets/img//instalar-archlinux/installer-disc-option.png)  
 
 Seleccionamos el gues operating system.  
 
-![os](/assets/images/instalar-archlinux/guest-operating-system.png)  
+![os](/assets/img//instalar-archlinux/guest-operating-system.png)  
 
 El siguiente paso será asignarle la máxima capacidad al disco virtual, en mi caso he añadido 60GB y he seleccionado la opción de almacenar el disco duro como un solo fichero.
 Se recomienda usar la segunda opción, de almacenarlo en varios ficheros cuando se esta utilizando un sistema de ficheros con límite de capacidad.  
 
-![diskspace](/assets/images/instalar-archlinux/disk_space.png)
+![diskspace](/assets/img//instalar-archlinux/disk_space.png)
 
 En el siguiente paso le daremos al botón de **customize Hardware** yo, siguiendo las recomendaciones de otros usuarios que tienen más conocimientos, he asignado 60GB de disco, 2 CPU, 4GB de memoria RAM y he pueso el adaptador de red como Briged, para usar el adaptador físico de mi máquina y poder tener salida a internet.  
 
-![configuration](/assets/images/instalar-archlinux/hardware-configuration.png)
+![configuration](/assets/img//instalar-archlinux/hardware-configuration.png)
 
 Hacemos clic en **Finish**.
 
@@ -97,7 +97,7 @@ Este es el fichero que **systemd** lee al principio para cargar las keymaps.
 Para ello usaremos [cfdisk](https://es.wikipedia.org/wiki/Cfdisk) y seleccionaremos el label **dos** (ver [MBR](https://en.wikipedia.org/wiki/Master_boot_record)).  
 Ahora vamos a crear las particiones, crearemos 3 particiones, una de 512M PRIMARIA, otra de 54.5G PRIMARIA y otra de 5G PRIMARIA para la memoria SWAP.
 
-![partitions](/assets/images/instalar-archlinux/all-partitions.png)  
+![partitions](/assets/img//instalar-archlinux/all-partitions.png)  
 
 
 Nota: los tamaños los he escogido basandome en guías. **Los tamaños se asignan con M y G** Ej. 512M o 5G
@@ -106,13 +106,13 @@ Nota: los tamaños los he escogido basandome en guías. **Los tamaños se asigna
 
 En la partición SWAP seleccionamos **Type**   
 
-![swap](/assets/images/instalar-archlinux/partition-type.png)
+![swap](/assets/img//instalar-archlinux/partition-type.png)
 
 Seleccionamos la opción 82 Linux swap / solarias y cuando salgamos, seleccionamos la opción write para confirmar la configuración.  
 
 Así deberían quedar   
 
-![partitionresult](/assets/images/instalar-archlinux/final-disk.png)
+![partitionresult](/assets/img//instalar-archlinux/final-disk.png)
 
 ### Dar formator a las particiones
 
@@ -170,7 +170,7 @@ Una vez ejecutado el comando arch-chroot nos abrirá una nueva consola, esta con
 Ahora configuraremos una contraseña para el usuario root. 
 
 
-![rootpassword](/assets/images/instalar-archlinux/arch-chroot.png).  
+![rootpassword](/assets/img//instalar-archlinux/arch-chroot.png).  
 
 También aprovecharemos para crear un usuario 
 
@@ -202,7 +202,7 @@ foo@bar:~$ pacman -S vim nano
 Y ahora vamos a editar el fichero /etc/sudoers  
 Tenemos que descomentar la línea marcado en verde, para que todos los usuarios pertenecientes al grupo wheel puedan ejecutar cualquier comando. ¡OJO! no descomentar la línea marcada en rojo, o NO pedirá el password para hacer un sudo su.  
 
-![sudoers](/assets/images/instalar-archlinux/edit-sudoers.png)
+![sudoers](/assets/img//instalar-archlinux/edit-sudoers.png)
 
 ## Instalar y configurar bootloader
 
@@ -228,11 +228,11 @@ foo@bar:~$ echo juan > /etc/hostname
 Ahora debemos reiniciar, para ello hacemos un **exit** para salir de la consola de arch-chroot y ejecutamos un **reboot now**.  
 Nos aparecerá el login, lo introducimos.  
 
-![login](/assets/images/instalar-archlinux/login.png)  
+![login](/assets/img//instalar-archlinux/login.png)  
 
 Y comprobamos que hemos accedido con el usuario juan.  
 
-![juanacces](/assets/images/instalar-archlinux/juan-access.png)
+![juanacces](/assets/img//instalar-archlinux/juan-access.png)
 
 ## Configurar acceso a internet
 
@@ -287,7 +287,7 @@ foo@bar:~$ makepkg -si
 
 Esta es la pinta que tiene que tener despues de compilar/instalar AUR.  
 
-![aur](/assets/images/instalar-archlinux/aur-ok.png)
+![aur](/assets/img//instalar-archlinux/aur-ok.png)
 
 ## Instalación black arch
 
@@ -304,7 +304,7 @@ foo@bar:~$ curl -O https://blackarch.org/strap.sh
 ```
 El comando anterior simplemente nos descarga el fichero, ahora modificamos los permisos para poder ejecutarlo.  
 
-![strappermission](/assets/images/instalar-archlinux/strap-permissions.png)
+![strappermission](/assets/img//instalar-archlinux/strap-permissions.png)
 
 Ahora ejecutamos el .sh como usuario root.
 
@@ -312,10 +312,10 @@ Ahora ejecutamos el .sh como usuario root.
 foo@bar:~$ sudo su
 
 # suponiendo que estamos en la ruta donde esta el fichero
-foo@bar:~$ /assets/images/instalar-archlinux/strap.sh
+foo@bar:~$ /assets/img//instalar-archlinux/strap.sh
 ```
   
-![blackarchready](/assets/images/instalar-archlinux/blackarch-ready.png)  
+![blackarchready](/assets/img//instalar-archlinux/blackarch-ready.png)  
 
 Como vemos, ya tenemos black arch instalado, mediante el comando **pacman** podríamos instalar todas las herramientas necesarios para hacer nuestras pruebas de pentesting. 
 
@@ -338,9 +338,9 @@ foo@bar:~$ systemctl enable --now gdm.service
 ```
 Esperamos, y ya tenemos nuestra interfaz gráfica  
 
-![gui](/assets/images/instalar-archlinux/interfaz-grafica.png)  
+![gui](/assets/img//instalar-archlinux/interfaz-grafica.png)  
 
-![gui2](/assets/images/instalar-archlinux/gui-2.png)
+![gui2](/assets/img//instalar-archlinux/gui-2.png)
 
 ## Arreglar proporciones de pantalla
 
